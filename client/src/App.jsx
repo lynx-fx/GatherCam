@@ -8,6 +8,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { toast, Toaster } from "sonner";
+import NotFound from "./Components/notFound.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/*" element={<NotFound />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
