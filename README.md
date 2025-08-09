@@ -38,7 +38,7 @@ A real-time, event-focused photo-sharing platform where guests can instantly upl
 
 ## License
 
-MIT License © 2025 Your Name  
+MIT License © 2025 Lynx
 
 ---
 
