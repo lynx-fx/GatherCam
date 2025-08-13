@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { toast, Toaster } from "sonner";
 import NotFound from "./Components/notFound.jsx";
+import Landing from "./Components/landing.jsx";
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       <Toaster richColors />
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
