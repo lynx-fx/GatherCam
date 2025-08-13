@@ -22,7 +22,7 @@ function Nav() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <Link href="/">EventSnap</Link>
+          <Link href="/">GatherCam</Link>
         </div>
         <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <Link
@@ -60,7 +60,7 @@ function Nav() {
           >
             Contact
           </Link>
-          <Link href="#" className="nav-cta">
+          <Link to="/login" className="nav-cta">
             Create Event
           </Link>
         </div>

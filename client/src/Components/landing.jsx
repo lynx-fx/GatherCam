@@ -1,84 +1,13 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/landing.css";
 import Nav from "./nav";
 
 export default function Landing() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <div className="landing-page">
-      {/* Navigation */}
-      {/* <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="nav-container">
-          <div className="nav-logo">
-            <Link href="/">EventSnap</Link>
-          </div>
-          <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
-            <Link
-              href="#home"
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="#features"
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Features
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              How It Works
-            </Link>
-            <Link
-              href="#pricing"
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#contact"
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <Link href="#" className="nav-cta">
-              Create Event
-            </Link>
-          </div>
-          <div
-            className={`hamburger ${isMenuOpen ? "active" : ""}`}
-            onClick={toggleMenu}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </nav> */}
       <Nav/>
-
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-container">
@@ -326,7 +255,7 @@ export default function Landing() {
           <div className="section-header">
             <h2 className="section-title">Ready to Transform Your Event?</h2>
             <p className="section-subtitle">
-              Join thousands of event organizers who trust EventSnap
+              Join thousands of event organizers who trust GatherCam
             </p>
           </div>
           <div className="contact-content">
@@ -343,7 +272,7 @@ export default function Landing() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h3>EventSnap</h3>
+              <h3>GatherCam</h3>
               <p>
                 Making event photo sharing effortless, one QR code at a time.
               </p>
@@ -371,7 +300,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>© 2024 EventSnap. All rights reserved.</p>
+            <p>© 2024 GatherCam. All rights reserved.</p>
           </div>
         </div>
       </footer>
