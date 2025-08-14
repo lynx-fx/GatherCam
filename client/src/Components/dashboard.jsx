@@ -1,6 +1,5 @@
-"use client";
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -13,7 +12,6 @@ export default function Dashboard() {
       name: "Sarah & Mike's Wedding",
       date: "2024-01-15",
       photos: 247,
-      guests: 85,
       status: "active",
     },
     {
@@ -21,7 +19,6 @@ export default function Dashboard() {
       name: "Annual Company Retreat",
       date: "2024-01-20",
       photos: 156,
-      guests: 120,
       status: "active",
     },
     {
@@ -29,7 +26,6 @@ export default function Dashboard() {
       name: "Emma's 25th Birthday",
       date: "2024-01-10",
       photos: 89,
-      guests: 35,
       status: "completed",
     },
   ];
@@ -311,20 +307,22 @@ export default function Dashboard() {
             >
               JD
             </div>
-            <div>
-              <div
-                style={{
-                  fontWeight: "600",
-                  color: "white",
-                  fontSize: "0.875rem",
-                }}
-              >
-                John Doe
+            <Link to="/profile">
+              <div>
+                <div
+                  style={{
+                    fontWeight: "600",
+                    color: "white",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  Lynxx
+                </div>
+                <div style={{ color: "#9ca3af", fontSize: "0.75rem" }}>
+                  Lynx@gmail.com
+                </div>
               </div>
-              <div style={{ color: "#9ca3af", fontSize: "0.75rem" }}>
-                john@example.com
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </aside>
@@ -463,54 +461,7 @@ export default function Dashboard() {
                         color: "#10b981",
                       }}
                     >
-                      +12 today • Click to view
-                    </div>
-                  </div>
-                </div>
-
-                <div style={statCardStyle}>
-                  <div
-                    style={{
-                      width: "3rem",
-                      height: "3rem",
-                      borderRadius: "12px",
-                      background: "linear-gradient(135deg, #8b5cf6, #a855f7)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "1.5rem",
-                    }}
-                  >
-                    👥
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div
-                      style={{
-                        fontSize: "2rem",
-                        fontWeight: "700",
-                        color: "#1e293b",
-                        lineHeight: 1,
-                      }}
-                    >
-                      {currentEvent?.guests || 0}
-                    </div>
-                    <div
-                      style={{
-                        color: "#64748b",
-                        fontSize: "0.875rem",
-                        marginBottom: "0.25rem",
-                      }}
-                    >
-                      Active Guests
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "0.75rem",
-                        fontWeight: "600",
-                        color: "#10b981",
-                      }}
-                    >
-                      +5 online
+                      Click to view
                     </div>
                   </div>
                 </div>
@@ -639,22 +590,6 @@ export default function Dashboard() {
                     onClick={() => setActiveTab("photos")}
                   >
                     🖼️ View All Photos
-                  </button>
-                  <button
-                    style={{
-                      background: "white",
-                      color: "#64748b",
-                      border: "1px solid #e2e8f0",
-                      padding: "0.75rem 1.5rem",
-                      borderRadius: "8px",
-                      fontWeight: "600",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "0.5rem",
-                    }}
-                  >
-                    ⬇️ Download All Photos
                   </button>
                   <button
                     style={{
